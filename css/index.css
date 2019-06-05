@@ -134,6 +134,9 @@ body {
   height: 100%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+h2 {
+  color: #e54b4b;
+}
 .nav {
   display: flex;
   flex-flow: row wrap;
@@ -144,28 +147,53 @@ body {
 .nav a {
   padding: 20px;
   text-decoration: none;
-  color: black;
+  color: #e54b4b;
   font-size: 18px;
+}
+.nav a:hover {
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  .nav {
+    justify-content: center;
+  }
 }
 .introduction {
   display: flex;
   background-color: #dddddd;
+}
+@media (max-width: 500px) {
+  .introduction img {
+    width: 500px;
+  }
 }
 .overall-container {
   width: 880px;
   box-align: center;
   margin: auto;
 }
+@media (max-width: 500px) {
+  .overall-container {
+    width: 500px;
+    box-align: center;
+    margin: auto;
+  }
+}
 .name {
   margin: 20px;
   font-size: 40px;
 }
-.main-content {
-  display: flex;
-  flex-direction: column;
+@media (max-width: 500px) {
+  .name {
+    margin: 20px 0px;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+.margin-medium {
   margin: 30px;
 }
-.secondary-content {
+.main-content {
   display: flex;
   flex-direction: column;
   margin: 30px;
@@ -175,6 +203,11 @@ body {
   font-weight: bold;
   padding: 0px 0px 10px 0px;
 }
+.secondary-content {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
 .secondary-content h2 {
   font-size: 20px;
   font-weight: bold;
@@ -183,13 +216,20 @@ body {
 .bottom-content {
   padding-bottom: 30px;
 }
-.skill1 {
+.skills {
   padding: 10px 0px 10px 5px;
   margin: 0px 0px 5px 0px;
+}
+.skill1 {
   background-color: #dddddd;
+  padding: 10px 0px 10px 5px;
+  margin: 0px 0px 5px 0px;
 }
 .skill2 {
+  background-color: #eeeeee;
   padding: 10px 0px 10px 5px;
   margin: 0px 0px 5px 0px;
-  background-color: #eeeeee;
+}
+.email {
+  color: #e54b4b;
 }

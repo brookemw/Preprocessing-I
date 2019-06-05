@@ -58,7 +58,13 @@ html, body {
 	font-family: @font;
 }
 
+h2 {
+	color: @coral;
+}
+
 @font: Verdana, Geneva, Tahoma, sans-serif; 
+
+@coral: #e54b4b;
 
 .nav {
 	display: flex;
@@ -66,13 +72,23 @@ html, body {
 	justify-content: flex-end;
 	margin: 30px 0px 10px 0px;
 	background-color: #eeeeee;
+
+	a {
+		padding: 20px;
+		text-decoration: none;
+		color: @coral;
+		font-size: 18px;
+	}
+
+	a:hover {
+		font-weight: bold;
+	}
 }
 
-.nav a {
-	padding: 20px;
-	text-decoration: none;
-	color: black;
-	font-size: 18px;
+@media (max-width: 500px){
+	.nav {
+		justify-content: center;
+	}
 }
 
 .introduction {
@@ -81,10 +97,24 @@ html, body {
 
 }
 
+@media (max-width: 500px){
+	.introduction img {
+	width: 500px;
+	}
+}
+
 .overall-container {
 	width: 880px;
 	box-align: center;
 	margin: auto;
+}
+
+@media (max-width: 500px) {
+	.overall-container {
+		width: 500px;
+		box-align: center;
+		margin: auto;
+	}
 }
 
 .name {
@@ -92,46 +122,63 @@ html, body {
 	font-size: 40px;
 }
 
+@media (max-width: 500px) {
+	.name {
+		margin: 20px 0px;
+		font-size: 30px;
+		text-align: center;
+	}
+}
+
+.margin-medium {
+	margin: 30px;
+}
+
 .main-content {
 	display: flex;
 	flex-direction: column;
-	margin: 30px;
+	.margin-medium();
+
+	h2 {
+		font-size: 20px;
+		font-weight: bold;
+		padding: 0px 0px 10px 0px;
+	}
   }
 
-  .secondary-content {
+.secondary-content {
 	display: flex;
 	flex-direction: column;
-	margin: 30px;
-  }
+	.margin-medium();
 
-.main-content h2 {
-	font-size: 20px;
-	font-weight: bold;
-	padding: 0px 0px 10px 0px;
-}
-
-.secondary-content h2 {
-	font-size: 20px;
-	font-weight: bold;
-	padding: 0px 0px 10px 0px;
+	h2 {
+		font-size: 20px;
+		font-weight: bold;
+		padding: 0px 0px 10px 0px;
+	}
 }
 
 .bottom-content {
 	padding-bottom: 30px;
 }
 
-.skill1 {
+.skills {
 	padding: 10px 0px 10px 5px;
 	margin: 0px 0px 5px 0px;
+}
+
+.skill1 {
 	background-color: #dddddd;
+	.skills();
 
 }
 
 .skill2 {
-	padding: 10px 0px 10px 5px;
-	margin: 0px 0px 5px 0px;
-
 	background-color: #eeeeee;
+	.skills();
 }
 
-//Is this working?
+.email {
+	color: @coral;
+
+}
